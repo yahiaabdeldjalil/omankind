@@ -1,0 +1,186 @@
+import { useState, createContext, useContext } from 'react';
+
+// Language Context
+const LanguageContext = createContext();
+
+// Language Provider Component
+export default function LanguageProvider({ children }) {
+  const [language, setLanguage] = useState('en');
+
+  const translations = {
+    en: {
+      // Navigation
+      backToHome: "← Back to Home",
+      beginYourJourney: "Begin Your Journey",
+
+      // Header
+      title: "O Mankind",
+      subtitle: "A message of truth, peace, and purpose for every soul.",
+      journeyTitle: "Your Journey to Understanding",
+      journeySubtitle: "Take the first step towards discovering the beauty and wisdom of Islam",
+
+      // Sections
+      welcome: "Welcome",
+      welcomeText: "\"O Mankind\" — these words echo throughout the Qur'an, calling every heart to reflect, understand, and find peace. This platform is an invitation to explore the timeless message of Islam, a faith built on compassion, justice, and clarity.",
+
+      callOfIslam: "The Call of Islam",
+      callText: "Islam is not a new religion, but the final message in a chain of guidance sent by the One Creator. It affirms the message of Noah, Abraham, Moses, Jesus, and ends with Muhammad — peace be upon them all.",
+      ayah: "O mankind, indeed We have created you from male and female and made you peoples and tribes that you may know one another. Indeed, the most noble of you in the sight of Allah is the most righteous of you. Indeed, Allah is Knowing and Acquainted.",
+      ayahLocation: "[Hujurat: 13]",
+
+      exploreMessage: "Explore the Message",
+      exploreText: "Whether you're seeking meaning, peace, or clarity — Islam has answers rooted in divine wisdom. Start your journey, learn at your pace, and ask questions without fear or judgment.",
+
+      // Begin page
+      whatIsIslam: "What is Islam?",
+      islamIntro1: "Islam is a way of life that brings peace, purpose, and connection to the Creator. The word \"Islam\" itself means \"submission to Allah\" and \"peace\" — reflecting the tranquility that comes from aligning one's life with divine guidance.",
+      islamIntro2: "At its core, Islam teaches that there is one God (Allah in Arabic), who is the Creator and Sustainer of all that exists. Muslims believe that Allah sent prophets throughout history to guide humanity, and that Muhammad (peace be upon him) was the final messenger.",
+
+      fivePillars: "The Five Pillars of Islam",
+      shahada: "Shahada (Declaration of Faith)",
+      shahadaText: "\"There is no god but Allah, and Muhammad is His messenger.\" This simple declaration is the foundation of Islamic belief.",
+      salah: "Salah (Prayer)",
+      salahText: "Muslims pray five times daily, creating a constant connection with Allah and moments of peace throughout the day.",
+      
+      zakat: "Zakat (Almsgiving)",
+      zakatText: "Giving to those in need purifies wealth and creates a caring community where everyone is supported.",
+
+      sawm: "Sawm (Fasting)",
+      sawmText: "During the month of Ramadan, Muslims fast from dawn to sunset, developing self-discipline and empathy for those less fortunate.",
+
+      hajj: "Hajj (Pilgrimage)",
+      hajjText: "Once in their lives, if they are able, Muslims make a pilgrimage to Mecca, joining millions of others in a powerful demonstration of unity and devotion.",
+
+      // Footer
+      copyright: "© 2025 O Mankind. May peace and guidance be upon you.",
+
+      // Language
+      language: "Language",
+      english: "English",
+      arabic: "العربية",
+      french: "Français"
+    },
+
+    ar: {
+      // Navigation
+      backToHome: "← العودة للرئيسية",
+      beginYourJourney: "ابدأ رحلتك",
+
+      // Header
+      title: "يَا أَيُهَا النَّاسُ",
+      subtitle: "رسالة حق وسلام وهدف لكل نفس",
+      journeyTitle: "رحلتك نحو الفهم",
+      journeySubtitle: "اتخذ الخطوة الأولى نحو اكتشاف جمال وحكمة الإسلام",
+
+      // Sections
+      welcome: "السلام عليكم ورحمة الله",
+      welcomeText: "\"يا أيها الناس\" — هذه الكلمات تتردد في القرآن الكريم، تدعو كل قلب للتأمل والفهم والسكينة. هذه المنصة دعوة لاستكشاف رسالة الإسلام الخالدة، دين مبني على الرحمة والعدل والوضوح.",
+
+      callOfIslam: "دعوة الإسلام",
+      callText: "الإسلام ليس ديناً جديداً، بل الرسالة الأخيرة في سلسلة الهداية المرسلة من الخالق الواحد. إنه يؤكد رسالة نوح وإبراهيم وموسى وعيسى، وينتهي بمحمد — عليهم جميعاً السلام.",
+      ayah: "يَا أَيُّهَا النَّاسُ إِنَّا خَلَقْنَاكُم مِّن ذَكَرٍ وَأُنثَىٰ وَجَعَلْنَاكُمْ شُعُوبًا وَقَبَائِلَ لِتَعَارَفُوا ۚ إِنَّ أَكْرَمَكُمْ عِندَ اللَّهِ أَتْقَاكُمْ ۚ إِنَّ اللَّهَ عَلِيمٌ خَبِيرٌ",
+      ayahLocation: "[الحُجُرَات: 13]",
+      exploreMessage: "استكشف الرسالة",
+      exploreText: "سواء كنت تبحث عن المعنى أو السلام أو الوضوح — الإسلام لديه إجابات متجذرة في الحكمة الإلهية. ابدأ رحلتك، تعلم بوتيرتك الخاصة، واسأل أسئلة بلا خوف أو حكم.",
+
+      // Begin page
+      whatIsIslam: "ما هو الإسلام؟",
+      islamIntro1: "الإسلام هو أسلوب حياة يجلب السلام والهدف والاتصال بالخالق. كلمة \"الإسلام\" نفسها تعني \"الخضوع لله\" و\"السلام\" — مما يعكس الطمأنينة التي تأتي من مواءمة حياة المرء مع الهداية الإلهية.",
+      islamIntro2: "في جوهره، يعلم الإسلام أن هناك إلهاً واحداً (الله بالعربية)، وهو خالق ورازق كل ما هو موجود. يؤمن المسلمون أن الله أرسل أنبياء عبر التاريخ لهداية البشرية، وأن محمداً (صلى الله عليه وسلم) كان الرسول الأخير.",
+
+      fivePillars: "أركان الإسلام الخمسة",
+      shahada: "الشهادة",
+      shahadaText: "\"لا إله إلا الله، ومحمد رسول الله.\" هذا الإعلان البسيط هو أساس الإيمان الإسلامي.",
+      salah: "الصلاة",
+      salahText: "يصلي المسلمون خمس مرات يومياً، مما يخلق اتصالاً مستمراً مع الله ولحظات من السلام طوال اليوم.",
+      zakat: "الزكاة",
+      zakatText: "إن العطاء لمن يحتاج إليه ينقي الثروة ويخلق مجتمعًا متعاونًا حيث يتم دعم الجميع.",
+
+      sawm: "صوم رمضان",
+      sawmText: "خلال شهر رمضان، يصوم المسلمون من الفجر إلى غروب الشمس، مما يؤدي إلى تنمية الانضباط الذاتي والتعاطف مع أولئك الأقل حظا.",
+
+      hajj: "حج البيت",
+      hajjText: "مرة واحدة في حياتهم، إذا استطاعوا، يقوم المسلمون بالحج إلى مكة المكرمة، منضمين إلى ملايين البشر في عرض قوي للوحدة والإخلاص.",
+
+      // Footer
+      copyright: "© 2025 يا أيها الناس. عسى أن يكون عليكم السلام والهداية.",
+
+      // Language
+      language: "اللغة",
+      english: "English",
+      arabic: "العربية",
+      french: "Français"
+    },
+
+    fr: {
+      // Navigation
+      backToHome: "← Retour à l'accueil",
+      beginYourJourney: "Commencez votre voyage",
+
+      // Header
+      title: "Ô Humanité",
+      subtitle: "Un message de vérité, de paix et de but pour chaque âme.",
+      journeyTitle: "Votre voyage vers la compréhension",
+      journeySubtitle: "Faites le premier pas vers la découverte de la beauté et de la sagesse de l'Islam",
+
+      // Sections
+      welcome: "Bienvenue",
+      welcomeText: "\"Ô Humanité\" — ces mots résonnent dans le Coran, appelant chaque cœur à réfléchir, comprendre et trouver la paix. Cette plateforme est une invitation à explorer le message intemporel de l'Islam, une foi construite sur la compassion, la justice et la clarté.",
+      ayah: "Ô hommes ! Nous vous avons créés d’un mâle et d’une femelle, et Nous avons fait de vous des nations et des tribus, pour que vous vous entreconnaissiez. Le plus noble d’entre vous, auprès d’Allah, est le plus pieux. Allah est certes Omniscient et Grand- Connaisseur.",
+      ayahLocation: "[Hujurat: 13]",
+
+      callOfIslam: "L'appel de l'Islam",
+      callText: "L'Islam n'est pas une nouvelle religion, mais le message final dans une chaîne de guidance envoyée par le Créateur Unique. Il affirme le message de Noé, Abraham, Moïse, Jésus, et se termine avec Muhammad — que la paix soit sur eux tous.",
+
+      exploreMessage: "Explorer le message",
+      exploreText: "Que vous cherchiez du sens, de la paix ou de la clarté — l'Islam a des réponses enracinées dans la sagesse divine. Commencez votre voyage, apprenez à votre rythme, et posez des questions sans peur ni jugement.",
+
+      // Begin page
+      whatIsIslam: "Qu'est-ce que l'Islam ?",
+      islamIntro1: "L'Islam est un mode de vie qui apporte la paix, le but et la connexion au Créateur. Le mot \"Islam\" lui-même signifie \"soumission à Allah\" et \"paix\" — reflétant la tranquillité qui vient de l'alignement de sa vie avec la guidance divine.",
+      islamIntro2: "À sa base, l'Islam enseigne qu'il y a un Dieu (Allah en arabe), qui est le Créateur et le Soutien de tout ce qui existe. Les musulmans croient qu'Allah a envoyé des prophètes à travers l'histoire pour guider l'humanité, et que Muhammad (paix soit sur lui) était le dernier messager.",
+
+      fivePillars: "Les cinq piliers de l'Islam",
+      shahada: "Shahada (Déclaration de foi)",
+      shahadaText: "\"Il n'y a de dieu qu'Allah, et Muhammad est Son messager.\" Cette simple déclaration est le fondement de la croyance islamique.",
+
+      salah: "Salah (Prière)",
+      salahText: "Les musulmans prient cinq fois par jour, créant une connexion constante avec Allah et des moments de paix tout au long de la journée.",
+
+      zakat: "Zakat (L'aumône)",
+      zakatText: "Donner à ceux qui sont dans le besoin purifie la richesse et crée une communauté bienveillante où chacun est soutenu.",
+
+      sawm: "Sawm (Jeûne)",
+      sawmText: "Durant le mois du Ramadan, les musulmans jeûnent de l’aube au coucher du soleil, développant ainsi l’autodiscipline et l’empathie envers les moins fortunés.",
+
+      hajj: "Hajj (Pèlerinage)",
+      hajjText: "Une fois dans leur vie, s’ils en ont la possibilité, les musulmans font un pèlerinage à La Mecque, rejoignant ainsi des millions de personnes dans une puissante démonstration d’unité et de dévotion.",
+
+      // Footer
+      copyright: "© 2025 Ô Humanité. Que la paix et la guidance soient sur vous.",
+
+      // Language
+      language: "Langue",
+      english: "English",
+      arabic: "العربية",
+      french: "Français"
+    }
+  };
+
+  const t = (key) => translations[language][key] || key;
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+// Hook to use language context
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+}
