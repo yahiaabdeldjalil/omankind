@@ -14,7 +14,7 @@ export default function LanguageProvider({ children }) {
       beginYourJourney: "Begin Your Journey",
 
       // Header
-      title: "O Mankind",
+      title: "Ô Mankind",
       subtitle: "A message of truth, peace, and purpose for every soul.",
       journeyTitle: "Your Journey to Understanding",
       journeySubtitle: "Take the first step towards discovering the beauty and wisdom of Islam",
@@ -33,15 +33,18 @@ export default function LanguageProvider({ children }) {
 
       // Begin page
       whatIsIslam: "What is Islam?",
-      islamIntro1: "Islam is a way of life that brings peace, purpose, and connection to the Creator. The word \"Islam\" itself means \"submission to Allah\" and \"peace\" — reflecting the tranquility that comes from aligning one's life with divine guidance.",
-      islamIntro2: "At its core, Islam teaches that there is one God (Allah in Arabic), who is the Creator and Sustainer of all that exists. Muslims believe that Allah sent prophets throughout history to guide humanity, and that Muhammad (peace be upon him) was the final messenger.",
+      islamIntro1: "Islam is the submission to Allah through monotheism, obedience to Him, and disavowal of polytheism and its people. — reflecting the tranquility that comes from aligning one's life with divine guidance.",
+      islamIntro2: "At its core, Islam teaches that there is no god but Allah, who is the Creator and Sustainer of all that exists. Allah sent prophets throughout history to guide humanity, and that Muhammad (peace be upon him) was the final messenger.",
+      islamIntro3: "Through Quran, Allah tells to think deeply before truly knowing that submission is the right choice.",
 
-      fivePillars: "The Five Pillars of Islam",
+      fivePillars: "The Five Pillars of Islam (ordered)",
+      sfivePillars: "Every Muslim knows and practices",
+
       shahada: "Shahada (Declaration of Faith)",
-      shahadaText: "\"There is no god but Allah, and Muhammad is His messenger.\" This simple declaration is the foundation of Islamic belief.",
+      shahadaText: "\"There is no god but Allah, and Muhammad is His messenger.\" A declaration from one's heart is the foundation of Islamic belief.",
       salah: "Salah (Prayer)",
       salahText: "Muslims pray five times daily, creating a constant connection with Allah and moments of peace throughout the day.",
-      
+
       zakat: "Zakat (Almsgiving)",
       zakatText: "Giving to those in need purifies wealth and creates a caring community where everyone is supported.",
 
@@ -50,6 +53,24 @@ export default function LanguageProvider({ children }) {
 
       hajj: "Hajj (Pilgrimage)",
       hajjText: "Once in their lives, if they are able, Muslims make a pilgrimage to Mecca, joining millions of others in a powerful demonstration of unity and devotion.",
+
+      sixPillars: "The Six Pillars of Belief (ordered)",
+      sSixPillars: "Every Muslim believes in heart",
+
+      beliefAllah: "Belief in Allah",
+      beliefAllahText: "Belief in the existence of God Almighty, that He is One without partner, and that He is the Creator of all things.",
+      beliefAngels: "Belief in Angels",
+      beliefAngelsText: "Belief in the existence of angels, luminous creatures who do not disobey God in what He commands them and do as they are commanded.",
+      beliefDivineBooks: "Belief in the Divine Books",
+      beliefDivineBooksText: "Belief that God revealed books to the prophets to guide humanity, such as the Holy Quran, the Torah, the Gospel, and the Psalms",
+      beliefMessengers: "Belief in the Messengers",
+      beliefMessengersText: "Belief that God sent messengers and prophets to mankind to guide them, the last of whom was Muhammad, peace and blessings be upon him.",
+
+      beliefLastday: "Belief in the Last Days",
+      beliefLastDayText: "Belief in the Day of Judgment, the day on which God will resurrect mankind for judgment and recompense.",
+
+      beliefPredestination: "Belief in Predestination",
+      beliefPredestinationText: "Belief that God has predestined everything, both good and evil, and that His eternal knowledge is His.",
 
       // Footer
       copyright: "© 2025 O Mankind. May peace and guidance be upon you.",
@@ -87,20 +108,39 @@ export default function LanguageProvider({ children }) {
       whatIsIslam: "ما هو الإسلام؟",
       islamIntro1: "الإسلام هو أسلوب حياة يجلب السلام والهدف والاتصال بالخالق. كلمة \"الإسلام\" نفسها تعني \"الخضوع لله\" و\"السلام\" — مما يعكس الطمأنينة التي تأتي من مواءمة حياة المرء مع الهداية الإلهية.",
       islamIntro2: "في جوهره، يعلم الإسلام أن هناك إلهاً واحداً (الله بالعربية)، وهو خالق ورازق كل ما هو موجود. يؤمن المسلمون أن الله أرسل أنبياء عبر التاريخ لهداية البشرية، وأن محمداً (صلى الله عليه وسلم) كان الرسول الأخير.",
+      islamIntro3: "يدعونا الله عزوجل من خلال القرآن الكريم الى التفكر عميقا قبل التأكد أن الإسلام هو الخيار الصحيح.",
 
       fivePillars: "أركان الإسلام الخمسة",
+      sfivePillars: "يعرفها كل مسلم",
       shahada: "الشهادة",
-      shahadaText: "\"لا إله إلا الله، ومحمد رسول الله.\" هذا الإعلان البسيط هو أساس الإيمان الإسلامي.",
+      shahadaText: "\"لا إله إلا الله، محمد رسول الله.\" هذا الإعلان البسيط هو أساس الإيمان الإسلامي.",
       salah: "الصلاة",
       salahText: "يصلي المسلمون خمس مرات يومياً، مما يخلق اتصالاً مستمراً مع الله ولحظات من السلام طوال اليوم.",
       zakat: "الزكاة",
       zakatText: "إن العطاء لمن يحتاج إليه ينقي الثروة ويخلق مجتمعًا متعاونًا حيث يتم دعم الجميع.",
-
       sawm: "صوم رمضان",
       sawmText: "خلال شهر رمضان، يصوم المسلمون من الفجر إلى غروب الشمس، مما يؤدي إلى تنمية الانضباط الذاتي والتعاطف مع أولئك الأقل حظا.",
-
       hajj: "حج البيت",
       hajjText: "مرة واحدة في حياتهم، إذا استطاعوا، يقوم المسلمون بالحج إلى مكة المكرمة، منضمين إلى ملايين البشر في عرض قوي للوحدة والإخلاص.",
+
+
+      sixPillars: "أركان الإيمان (مرتبة)",
+      sSixPillars: "كل مسلم يؤمن بها في قلبه",
+
+      beliefAllah: "الإيمان بالله",
+      beliefAllahText: "الإيمان بوجود الله عز وجل، وأنه واحد لا شريك له، وأنه خالق كل شيء.",
+      beliefAngels: "الإيمان بالملائكة",
+      beliefAngelsText: "الإيمان بوجود الملائكة، وهم مخلوقات نورانية لا يعصون الله ما أمرهم ويفعلون ما يؤمرون.",
+      beliefDivineBooks: "الإيمان بالكتب",
+      beliefDivineBooksText: "الإيمان بأن الله أنزل كتباً على الأنبياء لهداية البشر، مثل القرآن الكريم، والتوراة، والإنجيل، والزبور.",
+      beliefMessengers: "الإيمان بالرسل",
+      beliefMessengersText: "الإيمان بأن الله أرسل رسلاً وأنبيإً إلى الناس لهدايتهم، وآخرهم محمد صلى الله عليه وسلم.",
+
+      beliefLastday: "الإيمان باليوم الآخر",
+      beliefLastDayText: "الإيمان بيوم القيامة، وهو اليوم الذي يبعث الله فيه الناس للحساب والجزاء.",
+
+      beliefPredestination: "الإيمان بالقضاء والقدر خيره وشره",
+      beliefPredestinationText: "الإيمان بأن الله قدر كل شيء، خيره وشره، وعلمه الأزلي. ",
 
       // Footer
       copyright: "© 2025 يا أيها الناس. عسى أن يكون عليكم السلام والهداية.",
@@ -139,8 +179,10 @@ export default function LanguageProvider({ children }) {
       whatIsIslam: "Qu'est-ce que l'Islam ?",
       islamIntro1: "L'Islam est un mode de vie qui apporte la paix, le but et la connexion au Créateur. Le mot \"Islam\" lui-même signifie \"soumission à Allah\" et \"paix\" — reflétant la tranquillité qui vient de l'alignement de sa vie avec la guidance divine.",
       islamIntro2: "À sa base, l'Islam enseigne qu'il y a un Dieu (Allah en arabe), qui est le Créateur et le Soutien de tout ce qui existe. Les musulmans croient qu'Allah a envoyé des prophètes à travers l'histoire pour guider l'humanité, et que Muhammad (paix soit sur lui) était le dernier messager.",
+      islamIntro3: "Allah nous invite à travers le Quran de penser profondément avant de conclure que l'Islam est la meilleure décision de vie.",
 
       fivePillars: "Les cinq piliers de l'Islam",
+      sfivePillars: "Tout musulman le sait",
       shahada: "Shahada (Déclaration de foi)",
       shahadaText: "\"Il n'y a de dieu qu'Allah, et Muhammad est Son messager.\" Cette simple déclaration est le fondement de la croyance islamique.",
 
@@ -155,6 +197,25 @@ export default function LanguageProvider({ children }) {
 
       hajj: "Hajj (Pèlerinage)",
       hajjText: "Une fois dans leur vie, s’ils en ont la possibilité, les musulmans font un pèlerinage à La Mecque, rejoignant ainsi des millions de personnes dans une puissante démonstration d’unité et de dévotion.",
+
+      
+      sixPillars: "Piliers de la foi (par ordre)",
+      sSixPillars: "Chaque musulman y croit profondément",
+
+      beliefAllah: "Croyance en Allah",
+      beliefAllahText: "Croyance en l'existence d'Allah Tout-Puissant, qu'il est Unique et Sans associé, et qu'il est le Créateur de toute chose.",
+      beliefAngels: "Croyance aux anges",
+      beliefAngelsText: "Croyance en l'existence des anges, créatures lumineuses qui ne désobéissent pas à Dieu et qui font ce qu'Il leur commande.",
+      beliefDivineBooks: "Croyance aux Livres divins :",
+      beliefDivineBooksText: "Croyance que Dieu a révélé des Livres aux prophètes pour guider l'humanité, tels que le Saint Coran, la Torah, l'Évangile et les Psaumes.",
+      beliefMessengers: "Croyance aux messagers :",
+      beliefMessengersText: "Croyance que Dieu a envoyé des messagers et des prophètes à l'humanité pour la guider, le dernier d'entre eux étant Mohammed (paix et bénédictions d'Allah sur lui).",
+
+      beliefLastday: "Croyance au Jour Dernier :",
+      beliefLastDayText: "Croyance au Jour du Jugement, le jour où Dieu ressuscitera l'humanité pour le jugement et la rétribution.",
+
+      beliefPredestination: "Croyance en la prédestination :",
+      beliefPredestinationText: "Croire que Dieu a tout prédestiné, le bien comme le mal, et qu’il possède la connaissance éternelle.",
 
       // Footer
       copyright: "© 2025 Ô Humanité. Que la paix et la guidance soient sur vous.",

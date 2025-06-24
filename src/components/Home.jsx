@@ -9,7 +9,7 @@ export default function Home() {
         >
 
             {/* Header */}
-            <header className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 px-6 text-center shadow-lg">
+            <header className="space-y-4 bg-gradient-to-r from-emerald-600 to-teal-700 text-white py-16 px-6 text-center shadow-lg">
                 <div className="max-w-4xl mx-auto">
                     <h1 className="text-5xl md:text-6xl font-bold mb-4 tracking-wide">
                         {t('title')}

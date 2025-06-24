@@ -6,9 +6,9 @@ export default function Begin() {
 
     return (
         <>
-            <div 
-            dir={`${language === 'ar'?'rtl':'ltr'}`}
-            className={`min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50`}>
+            <div
+                dir={`${language === 'ar' ? 'rtl' : 'ltr'}`}
+                className={`min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50`}>
                 {/* Navigation */}
                 <nav className="bg-white shadow-sm border-b border-emerald-200 py-4 px-6">
                     <div className="max-w-4xl mx-auto flex items-center justify-between">
@@ -48,47 +48,100 @@ export default function Begin() {
                         <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
                             <p>{t('islamIntro1')}</p>
                             <p>{t('islamIntro2')}</p>
+                            <p>{t('islamIntro3')}</p>
                         </div>
                     </section>
 
-                    {/* The Five Pillars */}
+                    {/* Arkanul islam */}
                     <section className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl shadow-lg p-8 md:p-12 border border-emerald-200">
-                        <h2 className="text-3xl font-bold text-teal-800 mb-8 text-center">
+                        <h2 className="text-3xl font-bold text-teal-800 mb-1 text-center">
                             {t('fivePillars')}
                         </h2>
-
+                        <h2 className="text-xl italic font-light text-teal-800 mb-2 text-center">
+                            {t('sfivePillars')}
+                        </h2>
                         <div className="grid gap-6">
-                            <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-emerald-500">
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-emerald-500">
                                 <h3 className="text-xl font-bold text-slate-800 mb-3">1. {t('shahada')}</h3>
                                 <p className="text-slate-700 leading-relaxed">
                                     {t('shahadaText')}
                                 </p>
                             </div>
 
-                            <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-teal-500">
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-teal-500">
                                 <h3 className="text-xl font-bold text-slate-800 mb-3">2. {t('salah')}</h3>
                                 <p className="text-slate-700 leading-relaxed">
                                     {t('salahText')}
                                 </p>
                             </div>
-                            <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-blue-500">
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-blue-500">
                                 <h3 className="text-xl font-bold text-slate-800 mb-3">3. {t('zakat')}</h3>
                                 <p className="text-slate-700 leading-relaxed">
                                     {t('zakatText')}
                                 </p>
                             </div>
 
-                            <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-indigo-500">
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-indigo-500">
                                 <h3 className="text-xl font-bold text-slate-800 mb-3">4. {t('sawm')}</h3>
                                 <p className="text-slate-700 leading-relaxed">
                                     {t('sawmText')}
                                 </p>
                             </div>
 
-                            <div className="bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-500">
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-500">
                                 <h3 className="text-xl font-bold text-slate-800 mb-3">5. {t('hajj')}</h3>
                                 <p className="text-slate-700 leading-relaxed">
                                     {t('hajjText')}
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    {/* Arkanul iman */}
+                    <section className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl shadow-lg p-8 md:p-12 border border-emerald-200">
+                        <h2 className="text-3xl font-bold text-teal-800 mb-1 text-center">
+                            {t('sixPillars')}
+                        </h2>
+                        <h2 className="text-xl italic font-light text-teal-800 mb-2 text-center">
+                            {t('sSixPillars')}
+                        </h2>
+                        <div className="grid gap-6">
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-emerald-500">
+                                <h3 className="text-xl font-bold text-slate-800 mb-3">1. {t('beliefAllah')}</h3>
+                                <p className="text-slate-700 leading-relaxed">
+                                    {t('beliefAllahText')}
+                                </p>
+                            </div>
+
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-teal-500">
+                                <h3 className="text-xl font-bold text-slate-800 mb-3">2. {t('beliefAngels')}</h3>
+                                <p className="text-slate-700 leading-relaxed">
+                                    {t('beliefAngelsText')}
+                                </p>
+                            </div>
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-blue-500">
+                                <h3 className="text-xl font-bold text-slate-800 mb-3">3. {t('beliefDivineBooks')}</h3>
+                                <p className="text-slate-700 leading-relaxed">
+                                    {t('beliefDivineBooksText')}
+                                </p>
+                            </div>
+
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-indigo-500">
+                                <h3 className="text-xl font-bold text-slate-800 mb-3">4. {t('beliefMessengers')}</h3>
+                                <p className="text-slate-700 leading-relaxed">
+                                    {t('beliefMessengersText')}
+                                </p>
+                            </div>
+
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-500">
+                                <h3 className="text-xl font-bold text-slate-800 mb-3">5. {t('beliefLastday')}</h3>
+                                <p className="text-slate-700 leading-relaxed">
+                                    {t('beliefLastDayText')}
+                                </p>
+                            </div>
+                            <div className="hover:scale-105 transition ease-in-out bg-white rounded-xl p-6 shadow-md border-l-4 border-purple-500">
+                                <h3 className="text-xl font-bold text-slate-800 mb-3">5. {t('beliefPredestination')}</h3>
+                                <p className="text-slate-700 leading-relaxed">
+                                    {t('beliefPredestinationText')}
                                 </p>
                             </div>
                         </div>
