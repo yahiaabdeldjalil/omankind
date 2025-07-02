@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "./LanguageProvider";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -146,6 +147,19 @@ export default function Begin() {
                             </div>
                         </div>
                     </section>
+                    {/* Explore the Message Section */}
+                <section className="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-blue-100 text-center">
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+                        {t('salvation')}
+                    </h2>
+                    <p className="text-lg text-slate-700 leading-relaxed mb-8 max-w-3xl mx-auto">
+                        {t('salvationText')}
+                    </p>
+
+                    <Link to="/more" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        {t('learnMore')}
+                    </Link>
+                </section>
                 </main>
 
                 {/* Footer */}
