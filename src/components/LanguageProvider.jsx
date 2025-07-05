@@ -77,7 +77,7 @@ export default function LanguageProvider({ children }) {
       learnMore: "Learn More",
       // More
       more_1: "\"Do they not then earnestly seek to understand the Quran, or are their hearts locked up by them?\" [Muhammad: 24]",
-      more_2: "The religion that Allah has chosen for the worlds, and revealed its teachings as revelation to the Messenger of Allah, may Allah bless him and grant him peace, and preserved them in the Holy Qur’an, and explained them in the Prophetic Sunnah.",
+      more_2: "The only religion that Allah has set for the worlds, and revealed its teachings as revelation to the Messenger of Allah, may Allah bless him and grant him peace, and preserved them in the Holy Qur’an, and explained them in the Prophetic Sunnah.",
       more_miracles_title: "Miracles",
       more_miracles_subtitle: "It's just amazing!",
       more_miracles_first_title: "Rhetorical miracle",
@@ -85,7 +85,7 @@ export default function LanguageProvider({ children }) {
       more_miracles_second_title: "Scientific miracle",
       more_miracles_second_text: "It refers to scientific facts mentioned in the Qur’an that were proven by modern science centuries later, such as reference to the creation of the universe, the stages of fetal development, and others.",
       more_miracles_third_title: "Unseen miracles",
-      more_miracles_third_text:"Relates to news of the unseen, such as predictions of Muslim victories, future events, and others.",
+      more_miracles_third_text: "Relates to news of the unseen, such as predictions of Muslim victories, future events, and others.",
       more_miracles_fourth_title: "Legislative miracle",
       more_miracles_fourth_text: "This is evident in the rulings and legislation contained in the Qur'an, which are compatible with human nature and are suitable for all times and places.",
       more_miracles_fifth_title: "Constant miracle",
@@ -105,7 +105,7 @@ export default function LanguageProvider({ children }) {
       more_miracles_qna_fifth_text: "No, Islam dignifies woman",
       more_miracles_qna_sixth_title: "Do Muslims worship Muhammad?",
       more_miracles_qna_sixth_text: "No, we follow him for the correct way of how to worship Allah, and also for him to explain things and details",
-      
+
       // Footer
       copyright: "© 2025 O Mankind. May peace and guidance be upon you.",
 
@@ -178,6 +178,37 @@ export default function LanguageProvider({ children }) {
       salvation: "الخلاص",
       salvationText: "لا أحد غير الله الخالق يستطيع أن يقول ما هو الأفضل لمنع الضرر والمخاطرة والخسارة في الحياة.",
       learnMore: "اعرف أكثر",
+      // More
+      more_1: "\"أَفَلَا يَتَدَبَّرُونَ الْقُرْآنَ أَمْ عَلَى قُلُوبٍ أَقْفَالُهَا\" [محمد: 24]",
+      more_2: "الدين الوحيد الذي ارتضاه الله للعالمين، وأنزل تعاليمه وحياً على رسول الله صلى الله عليه وسلم، وحفظها في القرآن الكريم، وبينها في السنة النبوية.",
+      more_miracles_title: "معجزات",
+      more_miracles_subtitle: "الأمر مدهش",
+      more_miracles_first_title: "معجزة بلاغية",
+      more_miracles_first_text: "وهكذا عجز العرب في نصه البلاغي الفريد عن الإتيان بمثله، حتى في تحديهم للقرآن لم يستطيعوا الإتيان بمثله.",
+      more_miracles_second_title: "معجزة علمية",
+      more_miracles_second_text: "ويشير إلى الحقائق العلمية التي ذكرها القرآن وأثبتها العلم الحديث بعد قرون، كالإشارة إلى خلق الكون ومراحل نمو الجنين وغيرها.",
+      more_miracles_third_title: "معجزة غيبية",
+      more_miracles_third_text: "يتعلق بأخبار الغيب، كالتنبؤ بانتصارات المسلمين، والأحداث المستقبلية، وغيرها.",
+      more_miracles_fourth_title: "المعجزة التشريعية",
+      more_miracles_fourth_text: "ويتجلى ذلك في الأحكام والتشريعات التي تضمنها القرآن الكريم، والتي تتوافق مع طبيعة الإنسان، وتصلح لكل زمان ومكان.",
+      more_miracles_fifth_title: "معجزة مستمرة",
+      more_miracles_fifth_text: "لقد ظل القرآن الكريم دون تغيير منذ أن نزل على النبي صلى الله عليه وسلم لأول مرة. \"إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ\" [الحجر: 9]",
+      // more qna
+      more_miracles_qna_title: "سؤال وجواب",
+      more_miracles_qna_subtitle: "للمساعدة في إعادة صياغة الأمور بشكل مختصر",
+      more_miracles_qna_first_title: "ماهو القرآن؟",
+      more_miracles_qna_first_text: "شرح موجز وقوي لما هو القرآن الكريم: كلمة الله الحرفية التي أوحى بها إلى النبي محمد ﷺ. دليل للبشرية جمعاء - وليس فقط للمسلمين. كتاب الغرض والقانون والحكمة والأخلاق والشفاء الروحي.",
+      more_miracles_qna_second_title: "لماذا يتبع المسلمون الرسول محمدﷺ?",
+      more_miracles_qna_second_text: "لم يكن هو مؤلف القرآن، بل عاش القرآن - \"كانت شخصيته القرآن\". وهو الرسول الأخير في سلسلة طويلة من الأنبياء (عيسى، موسى، إبراهيم، إلخ).",
+      more_miracles_qna_third_title: "كيف غير القرآن العالم؟",
+      more_miracles_qna_third_text: "التحول في الجزيرة العربية خلال 23 عامًا: من الحرب القبلية إلى الحضارة الموحدة. ومن اضطهاد المرأة إلى كرامتها وحقوقها.",
+      more_miracles_qna_fourth_title: "هل الإسلام دين العنف؟",
+      more_miracles_qna_fourth_text: "لا، إنه السلام للبشرية جمعاء.",
+      more_miracles_qna_fifth_title: "هل الإسلام يضطهد المرأة؟",
+      more_miracles_qna_fifth_text: "لا، الإسلام يكرم المرأة",
+      more_miracles_qna_sixth_title: "هل يعبد المسلمون محمدا؟",
+      more_miracles_qna_sixth_text: "لا، بل نتبعه في الطريقة الصحيحة لكيفية عبادة الله، وأيضاً في بيان الأمور والتفاصيل.",
+
       // Footer
       copyright: "© 2025 يا أيها الناس. عسى أن يكون عليكم السلام والهداية.",
 
@@ -234,7 +265,7 @@ export default function LanguageProvider({ children }) {
       hajj: "Hajj (Pèlerinage)",
       hajjText: "Une fois dans leur vie, s’ils en ont la possibilité, les musulmans font un pèlerinage à La Mecque, rejoignant ainsi des millions de personnes dans une puissante démonstration d’unité et de dévotion.",
 
-      
+
       sixPillars: "Piliers de la foi (par ordre)",
       sSixPillars: "Chaque musulman y croit profondément",
 
@@ -255,8 +286,38 @@ export default function LanguageProvider({ children }) {
       salvation: "Salvation",
       salvationText: "Personne d’autre qu'Allah Le Créateur ne peut dire ce qui est le mieux pour prévenir les dommages, les risques et les pertes dans la vie.",
       learnMore: "Apprendre encore plus",
+      // More
+      more_1: "« Ne cherchent-ils donc pas sincèrement à comprendre le Coran, ou leurs cœurs sont-ils enfermés par eux ? » [Muhammad : 24]",
+      more_2: "La seule religion qu'Allah a établie pour les mondes, et dont il a révélé les enseignements au Messager d'Allah (paix et bénédiction d'Allah sur lui), et les a préservés dans le Saint Coran, et les a expliqués dans la Sunnah prophétique.",
+      more_miracles_title: "Miracles",
+      more_miracles_subtitle: "c'est juste surprenant!",
+      more_miracles_first_title: "Miracle rhétorique",
+      more_miracles_first_text: "Ainsi, dans leur texte rhétorique unique, les Arabes n’ont pas été capables de produire quelque chose de semblable, même dans leur défi au Coran, ils n’ont pas été capables de produire quelque chose de semblable.",
+      more_miracles_second_title: "Miracle scientifique",
+      more_miracles_second_text: "Il fait référence à des faits scientifiques mentionnés dans le Coran qui ont été prouvés par la science moderne des siècles plus tard, comme la référence à la création de l’univers, aux étapes du développement fœtal et à d’autres.",
+      more_miracles_third_title: "Miracle de l'imprévu",
+      more_miracles_third_text: "Concerne les nouvelles de l'imprévu, telles que les prédictions de victoires musulmanes, d'événements futurs et autres.",
+      more_miracles_fourth_title: "Miracle législatif",
+      more_miracles_fourth_text: "Cela est évident dans les règles et la législation contenues dans le Coran, qui sont compatibles avec la nature humaine et conviennent à tous les temps et à tous les lieux.",
+      more_miracles_fifth_title: "Miracle constant",
+      more_miracles_fifth_text: "Le Coran est resté inchangé depuis sa première révélation au Prophète.\n\"C'est Nous qui avons fait descendre le message [c'est-à-dire le Coran], et Nous en sommes les gardiens.\" [Al-Hijr : 9]",
+      // more qna
+      more_miracles_qna_title: "Question et Réponse",
+      more_miracles_qna_subtitle: "Pour aider à reformuler brièvement les choses",
+      more_miracles_qna_first_title: "Qu'est-ce que le Coran ?",
+      more_miracles_qna_first_text: "Une explication brève et puissante de ce qu’est le Coran : La parole littérale d'Allah révélée au Prophète Muhammad ﷺ. Un guide pour toute l’humanité — pas seulement pour les musulmans. Un livre de but, de loi, de sagesse, d’éthique et de guérison spirituelle.",
+      more_miracles_qna_second_title: "Pourquoi les musulmans suivent-ils le prophète Mouhammed ﷺ ?",
+      more_miracles_qna_second_text: "Il n’est pas l’auteur du Coran. Il a vécu le Coran — « son caractère était le Coran ». Il est le dernier messager d’une longue lignée de prophètes (Jésus, Moïse, Abraham, etc.).",
+      more_miracles_qna_third_title: "Comment le Coran a changé le monde",
+      more_miracles_qna_third_text: "La transformation de l’Arabie en 23 ans : de la guerre tribale à la civilisation unifiée. De l’oppression des femmes à leur dignité et à leurs droits.",
+      more_miracles_qna_fourth_title: "L’islam est-il une religion de violence ?",
+      more_miracles_qna_fourth_text: "Non, c'est une paix pour toute l'humanité.",
+      more_miracles_qna_fifth_title: "L’Islam opprime-t-il les femmes ?",
+      more_miracles_qna_fifth_text: "Non, l’Islam dignifie la femme",
+      more_miracles_qna_sixth_title: "Les musulmans adorent-ils Mouhammed ?",
+      more_miracles_qna_sixth_text: "Non, nous le suivons pour la bonne manière d'adorer Allah, et aussi pour qu'il explique les choses et les détails.",
 
-     // Footer
+      // Footer
       copyright: "© 2025 Ô Humanité. Que la paix et la guidance soient sur vous.",
 
       // Language
